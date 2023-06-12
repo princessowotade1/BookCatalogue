@@ -6,7 +6,7 @@ import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAngleDown, faBars} from "@fortawesome/free-solid-svg-icons";
-import styles from "../Assets/styles.modules.css"
+import styles from "../Assets/index.css"
 
 
 function NavigationBar(){
@@ -43,7 +43,7 @@ function NavigationBar(){
                     <Navbar.Brand href='#home'>
                         <img
                             src='https://www.givelify.com/wp-content/themes/givelify/assets/images/logo.svg?ver=2.4'
-                            alt='test image'
+                            alt='test'
                         />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{border:'none'}}><FontAwesomeIcon icon={faBars}/></Navbar.Toggle>

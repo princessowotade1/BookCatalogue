@@ -1,0 +1,102 @@
+/*NavBar Styling*/
+.dropdown-toggle::after{
+    display: none;
+}
+/*-------------*/
+
+/*Carousel Styling*/
+.sliderStyle{
+    display: flex;
+    background-color: ghostwhite;
+    flex: 0 1 auto;
+    margin-top: 20px;
+    height: 270px;
+    width: 170px;
+    left: -25px;
+    margin-bottom: 30px;
+    border: lightgray;
+}
+@media screen and (max-width: 768px) {
+    .sliderStyle {
+        background-color: ghostwhite;
+        margin: 20px;
+        height: 16rem;
+        width: 9rem;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1200px){
+    .sliderStyle{
+        margin: 20px;
+        height: 275px;
+        width: 170px;
+    }
+}
+.sliderContainer{
+    position: relative;
+    margin-top: 0;
+    padding-left:30px;
+    padding-right: 30px;
+    left: 35px;
+    width: 1360px;
+    overflow-x: hidden;
+
+}
+@media screen and (max-width: 768px) {
+    .sliderContainer {
+        left: -10px;
+        width: auto;
+    }
+}
+@media screen and (min-width: 769px) and (max-width:1200px){
+    .sliderContainer{
+        position: relative;
+        margin-top:10px;
+        left: -15px;
+        width:auto;
+    }
+}
+.right-arrow{
+    position: relative;
+    left: 1385px;
+    top: 170px;
+}
+.left-arrow{
+    position: relative;
+    left:20px;
+    top:170px;
+}
+
+@media screen and (max-width: 768px){
+    .m-arrows{
+        display: none;
+    }
+}
+@media screen and (min-width:769px) and (max-width: 1200px){
+    .m-arrows{
+        display: none;
+    }
+}
+
+.top{
+    position:relative;
+    top: 200px;
+}
+@media screen and (max-width:768px){
+    .top{
+        top: 230px;
+    }
+}
+@media screen and (min-width:769px) and (max-width: 1200px){
+    .top{
+        top: 290px;
+    }
+}
+.carousel-container{
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    overflow-x: hidden;
+}
+/*-------------*/
+
+
