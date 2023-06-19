@@ -2,3 +2,13 @@
     font-family: FontAwesome;
     src: url('./fa-solid-900.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: Libre;
+    src: url('LibreBaskerville-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: LibreBold;
+    src: url('LibreBaskerville-Bold.ttf') format('truetype');
+}

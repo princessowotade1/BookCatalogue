@@ -1,21 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-//import App from './App';
-import NavigationBar from "./Components/Navigation";
-//import Carousels from "./Components/Carousels";
-//import NewReleasesFiction from "./Utils/GBooks";
+import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {nfr,nnr,nyt} from "./Utils/GBooks"
 const root = ReactDOM.createRoot(document.getElementById('root'));
-console.log(nfr)
-console.log(nnr)
-console.log(nyt)
+
 root.render(
   <React.StrictMode>
-    <NavigationBar />
-    {/*<Carousels/>*/}
-
+      <App/>
   </React.StrictMode>
 );
 

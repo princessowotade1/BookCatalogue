@@ -2,6 +2,13 @@
 .dropdown-toggle::after{
     display: none;
 }
+.me-2::placeholder{
+    font-family: FontAwesome, serif;
+    font-weight: 900;
+}
+.me-2:focus{
+    font-family: Libre, serif;
+}
 /*-------------*/
 
 /*Carousel Styling*/
@@ -14,11 +21,13 @@
     width: 170px;
     left: -25px;
     margin-bottom: 30px;
-    border: lightgray;
+    border: none;
+    border-radius: 8px;
 }
+
 @media screen and (max-width: 768px) {
     .sliderStyle {
-        background-color: ghostwhite;
+        background-color: transparent;
         margin: 20px;
         height: 16rem;
         width: 9rem;
@@ -77,20 +86,6 @@
     }
 }
 
-.top{
-    position:relative;
-    top: 200px;
-}
-@media screen and (max-width:768px){
-    .top{
-        top: 230px;
-    }
-}
-@media screen and (min-width:769px) and (max-width: 1200px){
-    .top{
-        top: 290px;
-    }
-}
 .carousel-container{
     width: 100%;
     margin: 0;
@@ -99,4 +94,69 @@
 }
 /*-------------*/
 
+/*Home Page Styling*/
+
+.top{
+    position:relative;
+    top: 160px;
+}
+@media screen and (max-width:768px){
+    .top{
+        top: 130px;
+    }
+}
+@media screen and (min-width:769px) and (max-width: 1200px){
+    .top{
+        top: 290px;
+    }
+}
+.banner{
+    /*border: solid 1px black;*/
+    height: 250px;
+    margin-right:20px;
+    margin-left: 20px;
+    position: relative;
+    top: 40px;
+}
+@media screen and (max-width:768px){
+    .banner{
+        height: 100px;
+    }
+}
+@media screen and (min-width:769px) and (max-width: 1200px){
+    .banner{
+        height: 290px;
+    }
+}
+@keyframes homeArrow {
+
+    from{width:90px;}
+    to{width:170px;}
+    
+}
+.leftArrow-img{
+    animation: homeArrow 400ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.top h2, .top h3 {
+    font-family: LibreBold, serif;
+}
+
+/*.banner-img{*/
+/*    width: max-content;*/
+/*}*/
+/*@media screen and (max-width:768px){*/
+/*    .banner-img{*/
+/*        height: 150px;*/
+/*    }*/
+/*}*/
+/*@media screen and (min-width:769px) and (max-width: 1200px){*/
+/*    .banner-img{*/
+/*        height: 290px;*/
+/*    }*/
+/*}*/
+
+/*-------------*/
 
