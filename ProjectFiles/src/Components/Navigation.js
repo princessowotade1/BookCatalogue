@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-import '../Fonts/fonts.css'
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
@@ -50,13 +49,13 @@ function NavigationBar(){
                     <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="mx-auto">
                                 <div className="d-flex justify-content-center">
-                                    <NavDropdown title={<div style={{display:'inline-block', marginRight:'5px'}}>Popular Authors<FontAwesomeIcon icon={faAngleDown} style={{marginLeft:'10px'}}/></div>} className={`${styles.dropdownToggle}`}>
+                                    <NavDropdown title={<div style={{display:'inline-block', marginRight:'5px', fontFamily: 'Libre'}}>Popular Authors<FontAwesomeIcon icon={faAngleDown} style={{marginLeft:'10px'}}/></div>} className={`${styles.dropdownToggle}`}>
                                     <NavDropdown.Item>Sam Crescent</NavDropdown.Item>
                                     <NavDropdown.Item>Suzanne Collins</NavDropdown.Item>
                                     <NavDropdown.Item>Eve Vaughn</NavDropdown.Item>
                                 </NavDropdown>
 
-                                <NavDropdown title={<div style={{display:'inline-block'}}>Popular Genres<FontAwesomeIcon icon={faAngleDown} style={{marginLeft:'10px'}}/></div>} id="collapsible-nav-dropdown">
+                                <NavDropdown title={<div style={{display:'inline-block', fontFamily: 'Libre'}}>Popular Genres<FontAwesomeIcon icon={faAngleDown} style={{marginLeft:'10px'}}/></div>} id="collapsible-nav-dropdown">
                                     <NavDropdown.Item>Science Fiction</NavDropdown.Item>
                                     <NavDropdown.Item>Romance</NavDropdown.Item>
                                     <NavDropdown.Item>Fantasy</NavDropdown.Item>
@@ -67,7 +66,7 @@ function NavigationBar(){
                         <Form className="d-flex">
                             <Form.Control
                                 type="search"
-                                style={{fontFamily:"FontAwesome", borderRadius:"18px", fontWeight:"900"}}
+                                style={{borderRadius:"18px"}}
                                 placeholder="&#xf002;"
                                 className="me-2"
                                 aria-label="Search"

@@ -10,24 +10,23 @@ import Image from "react-bootstrap/Image"
 
 
 
-const words = ["hello", "goodbye", "adios", "no", "jesus", "any", "person"]
 const items = 5
 
 
-function Carousels(){
+function Carousels(props){
 
 
 
     const { carouselFragment, slideToPrevItem, slideToNextItem } = useSpringCarousel({
         itemsPerSlide: items,
         withLoop: true,
-        items: words.map((i) => ({
-            id: i,
+        items: props.books.map((book) => ({
+            id: book.id,
             renderItem: (
                 <Card className='sliderStyle'>
                     <Card.Body>
-                        <Image src='https://miblart.com/wp-content/uploads/2020/01/crime-and-mystery-cover-scaled-1-683x1024.jpeg' fluid rounded/>
-                        <Card.Text>Fortress of Blood (Book Two of...</Card.Text>
+                        <Image src={book.cover} fluid rounded/>
+                        <Card.Text style={{fontFamily:'Libre', marginTop: '3px'}}>{book.title}</Card.Text>
                     </Card.Body>
                 </Card>
             ),
