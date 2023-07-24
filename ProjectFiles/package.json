@@ -17,6 +17,7 @@
     "react-router-dom": "^6.12.1",
     "react-scripts": "5.0.1",
     "react-spring-carousel": "^2.0.19",
+    "react-star-ratings": "^2.3.0",
     "styled-components": "^6.0.0-rc.3",
     "web-vitals": "^2.1.4"
   },
