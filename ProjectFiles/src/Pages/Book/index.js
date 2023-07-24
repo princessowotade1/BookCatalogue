@@ -1,6 +1,6 @@
 import React  from 'react'
 //import {getBook} from "../../Utils/GBooks";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+//import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 //import {faAmazon} from "@fortawesome/free-solid-svg-icons"
 import {useQuery} from "react-query";
 import Carousels from "../../Components/Carousels";
@@ -28,7 +28,7 @@ export default function BookDetails(props){
     if (isLoading){
         return <div>Loading...</div>
     }
-    const test = ['Suzanne Collins']
+    //const test = ['Suzanne Collins']
     const bookDetails = data.items[0].volumeInfo
     const Books = data.items.slice(1, data.items.length-1)
     let {id} = data.items[0]

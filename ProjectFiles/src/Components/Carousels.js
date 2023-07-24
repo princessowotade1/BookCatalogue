@@ -10,7 +10,7 @@ import Image from "react-bootstrap/Image"
 
 
 
-const items = 5
+
 
 
 function Carousels(props){
