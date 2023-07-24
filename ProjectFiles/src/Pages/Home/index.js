@@ -32,10 +32,11 @@ export default function HomePage(){
         let {title, imageLinks} = volumeInfo
         if(title.length > 19){
             title = title.slice(0,19) + "..."
+
         }
         let {thumbnail} = imageLinks
         thumbnail = thumbnail.replace("&edge=curl","")
-        const obj = {title: title, cover:thumbnail, id:id}
+        const obj = {title: title, cover:thumbnail, id:id, cName: 'sliderStyle'}
         nonfiction.push(obj)
 
     })
@@ -47,7 +48,7 @@ export default function HomePage(){
         if(title.length > 19){
             title = title.slice(0,19) + "..."
         }
-        const obj = {title: title, cover:thumbnail, id:id}
+        const obj = {title: title, cover:thumbnail, id:id, cName: 'sliderStyle'}
         fiction.push(obj)
     })
     nyFiction.books.map((book) =>{
@@ -56,7 +57,7 @@ export default function HomePage(){
         if(title.length > 19){
             title = title.slice(0,19) + "..."
         }
-        const obj = {title: title, cover:book_image, id:primary_isbn10}
+        const obj = {title: title, cover:book_image, id:primary_isbn10, cName: 'sliderStyle'}
         nyF.push(obj)
     })
     nyNonfiction.books.map((book) =>{
@@ -65,7 +66,7 @@ export default function HomePage(){
         if(title.length > 19){
             title = title.slice(0,19) + "..."
         }
-        const obj = {title: title, cover:book_image, id:primary_isbn10}
+        const obj = {title: title, cover:book_image, id:primary_isbn10, cName: 'sliderStyle'}
         nyNF.push(obj)
     })
     nyChildren.books.map((book) =>{
@@ -74,7 +75,7 @@ export default function HomePage(){
         if(title.length > 19){
             title = title.slice(0,19) + "..."
         }
-        const obj = {title: title, cover:book_image, id:primary_isbn10}
+        const obj = {title: title, cover:book_image, id:primary_isbn10, cName: 'sliderStyle'}
         nyC.push(obj)
     })
     nyYA.books.map((book) =>{
@@ -83,7 +84,7 @@ export default function HomePage(){
         if(title.length > 19){
             title = title.slice(0,19) + "..."
         }
-        const obj = {title: title, cover:book_image, id:primary_isbn10}
+        const obj = {title: title, cover:book_image, id:primary_isbn10, cName: 'sliderStyle'}
         nyY.push(obj)
     })
     nyManga.books.map((book) =>{
@@ -93,7 +94,7 @@ export default function HomePage(){
         if(title.length > 19){
             title = title.slice(0,19) + "..."
         }
-        const obj = {title: title, cover:book_image, id:primary_isbn10}
+        const obj = {title: title, cover:book_image, id:primary_isbn10, cName: 'sliderStyle'}
         nyG.push(obj)
     })
 

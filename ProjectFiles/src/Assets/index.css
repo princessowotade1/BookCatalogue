@@ -14,7 +14,7 @@
 /*Carousel Styling*/
 .sliderStyle{
     display: flex;
-    background-color: ghostwhite;
+    /*background-color: ghostwhite;*/
     flex: 0 1 auto;
     margin-top: 20px;
     height: 270px;
@@ -144,19 +144,54 @@
     font-family: LibreBold, serif;
 }
 
-/*.banner-img{*/
-/*    width: max-content;*/
-/*}*/
-/*@media screen and (max-width:768px){*/
-/*    .banner-img{*/
-/*        height: 150px;*/
-/*    }*/
-/*}*/
-/*@media screen and (min-width:769px) and (max-width: 1200px){*/
-/*    .banner-img{*/
-/*        height: 290px;*/
-/*    }*/
-/*}*/
-
 /*-------------*/
 
+/*Book Page Styling*/
+.bookInfo-Container{
+    position: relative;
+    margin-top: 60px;
+    font-family: Libre, serif;
+}
+
+.bookCover{
+    position: relative;
+    left: 50px;
+    width: 270px;
+    height: 370px;
+}
+
+ .AuthorSlider {
+     background-color: ghostwhite;
+     display: flex;
+     flex: 0 1 auto;
+     margin-top: 20px;
+     height: 270px;
+     width: 170px;
+     left: -25px;
+     margin-bottom: 30px;
+     border: none;
+     border-radius: 8px;
+}
+
+@media screen and (max-width:768px){
+    .bookCover {
+        left: 80px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .bookDetails{
+        /*display: flex;*/
+        position: relative;
+        text-align: center;
+        /*justify-content: center;*/
+        margin-top: 10px;
+        margin-left: 0;
+        overflow-x: hidden;
+    }
+    .Descript{
+        margin-left: 38px;
+        margin-bottom: 35px;
+    }
+}
+/*-------------*/
