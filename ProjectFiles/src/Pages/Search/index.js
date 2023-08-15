@@ -1,16 +1,10 @@
-import React from "react";
+import React from 'react';
 //import terms from "../../Components/Navigation"
 
-
-
 function SearchPage(props) {
-    console.log(props)
+  console.log(props);
 
-    return(
-        <>
-
-        </>
-    )
+  return <></>;
 }
 
-export default SearchPage
+export default SearchPage;

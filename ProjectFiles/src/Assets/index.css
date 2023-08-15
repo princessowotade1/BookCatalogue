@@ -1,197 +1,199 @@
 /*NavBar Styling*/
-.dropdown-toggle::after{
-    display: none;
+.dropdown-toggle::after {
+  display: none;
 }
-.me-2::placeholder{
-    font-family: FontAwesome, serif;
-    font-weight: 900;
+.me-2::placeholder {
+  font-family: FontAwesome, serif;
+  font-weight: 900;
 }
-.me-2:focus{
-    font-family: Libre, serif;
+.me-2:focus {
+  font-family: Libre, serif;
 }
 /*-------------*/
 
 /*Carousel Styling*/
-.sliderStyle{
-    display: flex;
-    /*background-color: ghostwhite;*/
-    flex: 0 1 auto;
-    margin-top: 20px;
-    height: 270px;
+.sliderStyle {
+  display: flex;
+  /*background-color: ghostwhite;*/
+  flex: 0 1 auto;
+  margin-top: 20px;
+  height: 270px;
+  width: 170px;
+  left: -25px;
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .sliderStyle {
+    background-color: transparent;
+    margin: 20px;
+    height: 16rem;
+    width: 9rem;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .sliderStyle {
+    margin: 20px;
+    height: 275px;
     width: 170px;
-    left: -25px;
-    margin-bottom: 30px;
-    border: none;
-    border-radius: 8px;
+  }
+}
+.sliderContainer {
+  position: relative;
+  margin-top: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  left: 35px;
+  width: 1360px;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 768px) {
+  .sliderContainer {
+    left: -10px;
+    width: auto;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .sliderContainer {
+    position: relative;
+    margin-top: 10px;
+    left: -15px;
+    width: auto;
+  }
+}
+.right-arrow {
+  position: relative;
+  left: 1385px;
+  top: 170px;
+}
+.left-arrow {
+  position: relative;
+  left: 20px;
+  top: 170px;
 }
 
 @media screen and (max-width: 768px) {
-    .sliderStyle {
-        background-color: transparent;
-        margin: 20px;
-        height: 16rem;
-        width: 9rem;
-    }
+  .m-arrows {
+    display: none;
+  }
 }
-@media screen and (min-width: 769px) and (max-width: 1200px){
-    .sliderStyle{
-        margin: 20px;
-        height: 275px;
-        width: 170px;
-    }
-}
-.sliderContainer{
-    position: relative;
-    margin-top: 0;
-    padding-left:30px;
-    padding-right: 30px;
-    left: 35px;
-    width: 1360px;
-    overflow-x: hidden;
-
-}
-@media screen and (max-width: 768px) {
-    .sliderContainer {
-        left: -10px;
-        width: auto;
-    }
-}
-@media screen and (min-width: 769px) and (max-width:1200px){
-    .sliderContainer{
-        position: relative;
-        margin-top:10px;
-        left: -15px;
-        width:auto;
-    }
-}
-.right-arrow{
-    position: relative;
-    left: 1385px;
-    top: 170px;
-}
-.left-arrow{
-    position: relative;
-    left:20px;
-    top:170px;
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .m-arrows {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 768px){
-    .m-arrows{
-        display: none;
-    }
-}
-@media screen and (min-width:769px) and (max-width: 1200px){
-    .m-arrows{
-        display: none;
-    }
-}
-
-.carousel-container{
-    width: 100%;
-    margin: 0;
-    padding-bottom: 20px;
-    overflow-x: hidden;
+.carousel-container {
+  width: 100%;
+  margin: 0;
+  padding-bottom: 20px;
+  overflow-x: hidden;
 }
 /*-------------*/
 
 /*Home Page Styling*/
 
-.top{
-    position:relative;
-    top: 160px;
+.top {
+  position: relative;
+  top: 160px;
 }
-@media screen and (max-width:768px){
-    .top{
-        top: 130px;
-    }
+@media screen and (max-width: 768px) {
+  .top {
+    top: 130px;
+  }
 }
-@media screen and (min-width:769px) and (max-width: 1200px){
-    .top{
-        top: 290px;
-    }
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .top {
+    top: 290px;
+  }
 }
-.banner{
-    /*border: solid 1px black;*/
-    height: 250px;
-    margin-right:20px;
-    margin-left: 20px;
-    position: relative;
-    top: 40px;
+.banner {
+  /*border: solid 1px black;*/
+  height: 250px;
+  margin-right: 20px;
+  margin-left: 20px;
+  position: relative;
+  top: 40px;
 }
-@media screen and (max-width:768px){
-    .banner{
-        height: 100px;
-    }
+@media screen and (max-width: 768px) {
+  .banner {
+    height: 100px;
+  }
 }
-@media screen and (min-width:769px) and (max-width: 1200px){
-    .banner{
-        height: 290px;
-    }
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .banner {
+    height: 290px;
+  }
 }
 @keyframes homeArrow {
-
-    from{width:90px;}
-    to{width:170px;}
-    
+  from {
+    width: 90px;
+  }
+  to {
+    width: 170px;
+  }
 }
-.leftArrow-img{
-    animation: homeArrow 400ms;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
+.leftArrow-img {
+  animation: homeArrow 400ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
 
-.top h2, .top h3 {
-    font-family: LibreBold, serif;
+.top h2,
+.top h3 {
+  font-family: LibreBold, serif;
 }
 
 /*-------------*/
 
 /*Book Page Styling*/
-.bookInfo-Container{
+.bookInfo-Container {
+  position: relative;
+  margin-top: 60px;
+  font-family: Libre, serif;
+}
+
+.bookCover {
+  position: relative;
+  left: 50px;
+  width: 270px;
+  height: 370px;
+}
+
+.AuthorSlider {
+  background-color: ghostwhite;
+  display: flex;
+  flex: 0 1 auto;
+  margin-top: 20px;
+  height: 270px;
+  width: 170px;
+  left: -25px;
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .bookCover {
+    left: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bookDetails {
+    /*display: flex;*/
     position: relative;
-    margin-top: 60px;
-    font-family: Libre, serif;
-}
-
-.bookCover{
-    position: relative;
-    left: 50px;
-    width: 270px;
-    height: 370px;
-}
-
- .AuthorSlider {
-     background-color: ghostwhite;
-     display: flex;
-     flex: 0 1 auto;
-     margin-top: 20px;
-     height: 270px;
-     width: 170px;
-     left: -25px;
-     margin-bottom: 30px;
-     border: none;
-     border-radius: 8px;
-}
-
-@media screen and (max-width:768px){
-    .bookCover {
-        left: 80px;
-    }
-}
-
-@media screen and (max-width: 768px){
-    .bookDetails{
-        /*display: flex;*/
-        position: relative;
-        text-align: center;
-        /*justify-content: center;*/
-        margin-top: 10px;
-        margin-left: 0;
-        overflow-x: hidden;
-    }
-    .Descript{
-        margin-left: 38px;
-        margin-bottom: 35px;
-    }
+    text-align: center;
+    /*justify-content: center;*/
+    margin-top: 10px;
+    margin-left: 0;
+    overflow-x: hidden;
+  }
+  .Descript {
+    margin-left: 38px;
+    margin-bottom: 35px;
+  }
 }
 /*-------------*/
