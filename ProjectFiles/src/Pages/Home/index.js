@@ -32,7 +32,7 @@ export default function HomePage(){
         if(title.length > 19){
             title = title.slice(0,19) + "..."
         }
-        return {title: title, cover: book_image, id: primary_isbn10}
+        return {title: title, cover: book_image, id: primary_isbn10, cName: 'sliderStyle'}
     }
 
     function GoogleBooks(book){
@@ -40,10 +40,12 @@ export default function HomePage(){
         let {title, imageLinks} = volumeInfo
         if(title.length > 19){
             title = title.slice(0,19) + "..."
+
         }
         let {thumbnail} = imageLinks
         thumbnail = thumbnail.replace("&edge=curl","")
-        return {title: title, cover:thumbnail, id:id}
+
+        return {title: title, cover:thumbnail, id:id, cName: 'sliderStyle'}
     }
 
 
@@ -53,6 +55,7 @@ export default function HomePage(){
 
     })
     f_books.map((book) =>{
+
         const obj = GoogleBooks(book)
         fiction.push(obj)
     })

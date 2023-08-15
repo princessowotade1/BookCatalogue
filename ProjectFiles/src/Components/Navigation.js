@@ -3,6 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form"
+
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAngleDown, faBars} from "@fortawesome/free-solid-svg-icons";
 import styles from "../Assets/index.css"
@@ -10,6 +11,16 @@ import styles from "../Assets/index.css"
 
 function NavigationBar(){
     const [top, setTop] = useState(true)
+    const [terms, setTerms] = useState("")
+
+    const handleChange = (e) =>{
+        setTerms(e.target.value)
+    }
+    const handleSubmit = (e) =>{
+        e.preventDefault()
+        console.log(terms)
+
+    }
 
     useEffect(() => {
         window.onscroll = function () {
@@ -63,13 +74,15 @@ function NavigationBar(){
                                 </NavDropdown>
                                 </div>
                             </Nav>
-                        <Form className="d-flex">
+                        <Form className="d-flex" onSubmit={((e => handleSubmit(e)))}>
                             <Form.Control
                                 type="search"
                                 style={{borderRadius:"18px"}}
                                 placeholder="&#xf002;"
                                 className="me-2"
                                 aria-label="Search"
+                                value={terms}
+                                onChange={((e => handleChange(e)))}
                                 />
                         </Form>
                     </Navbar.Collapse>

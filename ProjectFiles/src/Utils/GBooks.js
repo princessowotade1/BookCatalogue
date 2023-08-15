@@ -15,6 +15,17 @@ const nytKey = "tacGMs0qbC4OcJvyP4VFgN3qtQYAiJnT"
     return await response.json()
 }
 
+export const getBook = (bookTitle, author) =>{
+
+    return fetch(`https://www.googleapis.com/books/v1/volumes?q=${bookTitle}+inauthor:${author}`)
+        .then(response =>{return response.json()})
+        .then(data =>{return data})
+        .catch(error =>{
+            console.log(error)
+            return null
+        })
+}
+
 export const getNYTBest = async() =>{
     const response = await fetch(
         `https://api.nytimes.com/svc/books/v3/lists/full-overview.json?api-key=${nytKey}`
