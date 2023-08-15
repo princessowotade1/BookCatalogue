@@ -26,8 +26,16 @@ export default function HomePage(){
 
     const [nyFiction, nyNonfiction, nyChildren, nyYA, nyManga] = Lists
 
+    function NYTBooks(book) {
+        let {title, book_image, primary_isbn10} = book
+        title = title.toLowerCase().split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
+        if(title.length > 19){
+            title = title.slice(0,19) + "..."
+        }
+        return {title: title, cover: book_image, id: primary_isbn10}
+    }
 
-    nf_books.map((book) =>{
+    function GoogleBooks(book){
         const {volumeInfo, id} = book
         let {title, imageLinks} = volumeInfo
         if(title.length > 19){
@@ -35,65 +43,37 @@ export default function HomePage(){
         }
         let {thumbnail} = imageLinks
         thumbnail = thumbnail.replace("&edge=curl","")
-        const obj = {title: title, cover:thumbnail, id:id}
+        return {title: title, cover:thumbnail, id:id}
+    }
+
+
+    nf_books.map((book) =>{
+        const obj = GoogleBooks(book)
         nonfiction.push(obj)
 
     })
     f_books.map((book) =>{
-        const {volumeInfo, id} = book
-        let {title, imageLinks} = volumeInfo
-        let {thumbnail} = imageLinks
-        thumbnail = thumbnail.replace("&edge=curl","")
-        if(title.length > 19){
-            title = title.slice(0,19) + "..."
-        }
-        const obj = {title: title, cover:thumbnail, id:id}
+        const obj = GoogleBooks(book)
         fiction.push(obj)
     })
     nyFiction.books.map((book) =>{
-        let {title, book_image, primary_isbn10} = book
-        title = title.toLowerCase().split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
-        if(title.length > 19){
-            title = title.slice(0,19) + "..."
-        }
-        const obj = {title: title, cover:book_image, id:primary_isbn10}
+        const obj = NYTBooks(book)
         nyF.push(obj)
     })
     nyNonfiction.books.map((book) =>{
-        let {title, book_image, primary_isbn10} = book
-        title = title.toLowerCase().split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
-        if(title.length > 19){
-            title = title.slice(0,19) + "..."
-        }
-        const obj = {title: title, cover:book_image, id:primary_isbn10}
+        const obj = NYTBooks(book)
         nyNF.push(obj)
     })
     nyChildren.books.map((book) =>{
-        let {title, book_image, primary_isbn10} = book
-        title = title.toLowerCase().split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
-        if(title.length > 19){
-            title = title.slice(0,19) + "..."
-        }
-        const obj = {title: title, cover:book_image, id:primary_isbn10}
+        const obj = NYTBooks(book)
         nyC.push(obj)
     })
     nyYA.books.map((book) =>{
-        let {title, book_image, primary_isbn10} = book
-        title = title.toLowerCase().split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
-        if(title.length > 19){
-            title = title.slice(0,19) + "..."
-        }
-        const obj = {title: title, cover:book_image, id:primary_isbn10}
+        const obj = NYTBooks(book)
         nyY.push(obj)
     })
     nyManga.books.map((book) =>{
-        let {title, book_image, primary_isbn10} = book
-
-        title = title.toLowerCase().split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
-        if(title.length > 19){
-            title = title.slice(0,19) + "..."
-        }
-        const obj = {title: title, cover:book_image, id:primary_isbn10}
+        const obj = NYTBooks(book)
         nyG.push(obj)
     })
 
